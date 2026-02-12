@@ -2,25 +2,25 @@ class AcpTraces < Formula
   desc "OTel tracing proxy for Agent Client Protocol"
   homepage "https://github.com/AndreKurait/acp-traces"
   license "Apache-2.0"
-  version "0.1.0"
+  version "0.2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/AndreKurait/acp-traces/releases/download/v0.1.0/acp-traces-macos-arm64"
-      sha256 "807136f49ec4d11aad996cbcb777d64b0e0f065e90c5e0e449c845862a883d75"
+      url "https://github.com/AndreKurait/acp-traces/releases/download/v0.2.0/acp-traces-macos-arm64"
+      sha256 "3fe093a561e6e26681d3cc5720afc2d7fc3b1ef24077dec55cb337196bc7dac4"
     else
-      url "https://github.com/AndreKurait/acp-traces/releases/download/v0.1.0/acp-traces-macos-amd64"
-      sha256 "098ebacebbc5840832b64210d4ff6c6f3b758904c555004e0e91dde8fcdac879"
+      url "https://github.com/AndreKurait/acp-traces/releases/download/v0.2.0/acp-traces-macos-amd64"
+      sha256 "3ba8e2c7c0aa45e291fb1c429d7ad824da4283f3ddb6f72f66bacc19e0289914"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/AndreKurait/acp-traces/releases/download/v0.1.0/acp-traces-linux-arm64"
-      sha256 "ce242cb39b51440176e3592fa15b76cfc3b4a0e5407462c23f589c924ddcfd7d"
+      url "https://github.com/AndreKurait/acp-traces/releases/download/v0.2.0/acp-traces-linux-arm64"
+      sha256 "6527fbeb07a418e9685e56421c3681cb48587927d4072400a9678ad018558010"
     else
-      url "https://github.com/AndreKurait/acp-traces/releases/download/v0.1.0/acp-traces-linux-amd64"
-      sha256 "2d8cba0f1881b0e4565ca91c923fb9b8f22d84dea332253c0b1975eba208d585"
+      url "https://github.com/AndreKurait/acp-traces/releases/download/v0.2.0/acp-traces-linux-amd64"
+      sha256 "3ba9fbc417a8a0640b18f04df0c34ce934a2e7111a1bb65f5b559a2857813d44"
     end
   end
 

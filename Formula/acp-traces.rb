@@ -1,26 +1,26 @@
 class AcpTraces < Formula
-  desc "OTel tracing proxy for Agent Client Protocol"
+  desc "Experimental OpenTelemetry tracing proxy for Agent Client Protocol"
   homepage "https://github.com/AndreKurait/acp-traces"
   license "Apache-2.0"
-  version "0.3.0"
+  version "0.3.1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/AndreKurait/acp-traces/releases/download/v0.3.0/acp-traces-macos-arm64"
-      sha256 "8f4e570af95fa0c6a7340547c6134bd55daf2da2baa6a5e54605cd89738e3c12"
+      url "https://github.com/AndreKurait/acp-traces/releases/download/v0.3.1/acp-traces-macos-arm64"
+      sha256 "f3644580ea93b01704dc28c17df2da2b022df356eb2dcb7af072dbb8424e2f31"
     else
-      url "https://github.com/AndreKurait/acp-traces/releases/download/v0.3.0/acp-traces-macos-amd64"
-      sha256 "797c89ef8da95f0ea4cffff1b42332c93f6e56a92e5c2dfc79a685589b629c9d"
+      url "https://github.com/AndreKurait/acp-traces/releases/download/v0.3.1/acp-traces-macos-amd64"
+      sha256 "34365a86d939976a27f69581358514a7f1dfd4995d5da9ee5c8b11f78a259980"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/AndreKurait/acp-traces/releases/download/v0.3.0/acp-traces-linux-arm64"
-      sha256 "c4629d2c5140418da10231efbac399a64f9d0220ca38600edafcd9877d2349ee"
+      url "https://github.com/AndreKurait/acp-traces/releases/download/v0.3.1/acp-traces-linux-arm64"
+      sha256 "0989442eb4bad3ad6636d72fb4c119f02a00082908800fb7f21cb208496f51c7"
     else
-      url "https://github.com/AndreKurait/acp-traces/releases/download/v0.3.0/acp-traces-linux-amd64"
-      sha256 "db762072dd38e6e70177217662cfefe04a09db1b2c8e342aec6d9da8689e06e2"
+      url "https://github.com/AndreKurait/acp-traces/releases/download/v0.3.1/acp-traces-linux-amd64"
+      sha256 "3f8ec17606701ac665bbd51861ca48d71a16ca9691f98b8eec7a7f0706e00d5f"
     end
   end
 
@@ -31,6 +31,7 @@ class AcpTraces < Formula
   end
 
   test do
+    assert_match "acp-traces #{version}", shell_output("#{bin}/acp-traces --version")
     assert_match "OTel tracing proxy", shell_output("#{bin}/acp-traces --help")
   end
 end
